@@ -217,6 +217,7 @@ def capture_scraper(season_year): #Realizar a captura via web scraping do site o
                         minutes = minutes_seconds[0].zfill(2)
                         seconds = minutes_seconds[1].ljust(3, '0')
                         race_time = f"+0:{minutes}.{seconds}"
+                        driver_status = "Finalizado"
 
                     else:
                         driver_status = "Finalizado" if race_time != "DNF" else race_time
